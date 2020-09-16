@@ -58,7 +58,7 @@ let likeNames = [];
 readFileData().then(() => {
 	getFileName("./public/images/swiper", "swiper").then((files) => {
 		imgNames = files;
-	},() => {
+	},(err) => {
 		console.log(err);
 		imgNames = false;
 	});
@@ -69,7 +69,7 @@ readFileData().then(() => {
 			obj[index].icon = file;
 			return obj[index];
 		});
-	},() => {
+	},(err) => {
 		console.log(err);
 	});
 
@@ -79,7 +79,7 @@ readFileData().then(() => {
 			obj[index].icon = file;		
 			return obj[index];
 		});
-	},() => {
+	},(err) => {
 		console.log(err);
 	})
 
@@ -90,7 +90,7 @@ readFileData().then(() => {
 				url: dataBase.more[index],
 			}
 		});
-	},() => {
+	},(err) => {
 		console.log(err);
 	})
 
@@ -100,7 +100,7 @@ readFileData().then(() => {
 			obj[index].icon = file;
 			return obj[index];
 		})
-	},() => {
+	},(err) => {
 		console.log(err);
 	})
 
